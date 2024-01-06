@@ -39,7 +39,8 @@ function! todo#txt#replace_date()
 endfunction
 
 function! todo#txt#mark_as_done()
-    call s:remove_priority()
+    " TODO: move this behind a global variable check
+    " call s:remove_priority()
     call todo#txt#prepend_date()
     execute 'normal! Ix '
 endfunction

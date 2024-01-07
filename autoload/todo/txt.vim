@@ -40,7 +40,9 @@ endfunction
 
 function! todo#txt#mark_as_done()
     " TODO: move this behind a global variable check
-    " call s:remove_priority()
+    " if !exists("g:todo_remove_priority") || g:todo_remove_priority != 'n'
+    "     call s:remove_priority()
+    " endif
     call todo#txt#prepend_date()
     execute 'normal! Ix '
 endfunction

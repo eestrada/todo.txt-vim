@@ -15,6 +15,7 @@ set cpo&vim
 " created or edited.
 setlocal textwidth=0
 setlocal wrapmargin=0
+setlocal commentstring=x\ %s
 
 " Mappings {{{1
 " Sort tasks {{{2

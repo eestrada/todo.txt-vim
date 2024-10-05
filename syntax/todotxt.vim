@@ -64,4 +64,4 @@ if exists('g:todo_load_python') && g:todo_load_python
     endif
 endif
 
-let b:current_syntax = "todo"
+let b:current_syntax = "todotxt"

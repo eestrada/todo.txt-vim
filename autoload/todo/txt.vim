@@ -54,7 +54,7 @@ endfunction
 function! s:append_to_file(file, lines)
     let l:lines = []
 
-    " Place existing tasks in done.txt at the beggining of the list.
+    " Place existing tasks in done.txt at the beginning of the list.
     if filereadable(a:file)
         call extend(l:lines, readfile(a:file))
     endif
@@ -72,9 +72,9 @@ function! todo#txt#remove_completed()
     let l:target_dir = expand('%:p:h')
     let l:todo_file = expand('%:p')
     " Check for user-defined g:todo_done_filename
-    if exists("g:todo_done_filename")
+    if exists('g:todo_done_filename')
         let l:todo_done_filename = g:todo_done_filename
-    elseif expand('%:t') == 'Todo.txt'
+    elseif expand('%:t') ==# 'Todo.txt'
         let l:todo_done_filename = 'Done.txt'
     else
         let l:todo_done_filename = 'done.txt'

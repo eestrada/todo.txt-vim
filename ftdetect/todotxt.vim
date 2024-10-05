@@ -5,8 +5,12 @@
 " Website:     http://github.com/freitass/todo.txt-vim
 " Version:     0.1
 
-autocmd BufNewFile,BufRead [Tt]odo.txt set filetype=todotxt
-autocmd BufNewFile,BufRead *.[Tt]odo.txt set filetype=todotxt
-autocmd BufNewFile,BufRead [Dd]one.txt set filetype=todotxt
-autocmd BufNewFile,BufRead *.[Dd]one.txt set filetype=todotxt
+augroup TodoTxtAug
+  autocmd!
+  autocmd BufNewFile,BufRead [Tt]odo.txt set filetype=todotxt
+  autocmd BufNewFile,BufRead *.[Tt]odo.txt set filetype=todotxt
+  autocmd BufNewFile,BufRead [Dd]one.txt set filetype=todotxt
+  autocmd BufNewFile,BufRead *.[Dd]one.txt set filetype=todotxt
+augroup END
+
 
